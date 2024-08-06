@@ -1,7 +1,9 @@
-/**
- * 1.what is node js??
- *
- * --> node js is a runtime environment for javascript
- * --> it is used to execute js programs outside the browser
- * --> not a library or framework
- */
+let math = require("./math");
+
+console.log("hiiiiiiiiii");
+
+//console.log(window); // dom manupulative thing are not taken in node from js engine
+
+//ex2:
+
+console.log(math.add(2, 3));

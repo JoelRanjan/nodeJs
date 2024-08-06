@@ -1,0 +1,38 @@
+1.what is node js?
+    node js is a runtime environment for javascript
+    it is used to execute js programs outside the browser
+    not a library or framework
+    js engine + c++
+
+--> npm : node package manager
+
+2.How to install node js?
+    download it in the official site. download lts version(long term support) . not to download the beta version.
+
+3.How to write a programs?
+     write normal js program and while running enter 'node filename'
+     here in nodejs only few js functionality have been taken , dom manulplation like window obj will not be there
+     eg: console.log("hi") // hi
+         console.log(window) // referrence error
+
+4. what is modular programming?
+   converting entire code to small modules and using them is called modular programming
+   export a module --> module.exports = {fnNames, fn1, fn2}
+   import a module --> const name = require("./path") 
+        if we give "./.." it checks in the current path
+        if dont give "./" it checks the name of the module in the builtin packages
+
+5.what is file handling in nodejs?
+    we would require a package "fs"
+    we can read,write, create,append,delete files
+    we can also create a folder and get stats of the file
+    --> refer file.js
+
+6.How nodejs works(architecture)?
+    whenever client raises a request, requests will be set into the "event queue" , event loop will check each request whether its a blocking 
+    or non blocking request. then it executes instatntly if its non blocking request.
+    otherwise it will send the request to a "thread pool" to execute.
+    Treadpool has workers. each worker will take each request and execute.
+    default no. of workers in threadpool == 4
+    to check no of workers ==> os.cpus().length
+    check img folder for architecturescreenshots

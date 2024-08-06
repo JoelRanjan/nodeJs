@@ -1,0 +1,20 @@
+{
+  "name": "nodeprograms",
+  "version": "1.0.0",
+  "description": "learn node",
+  "main": "intro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node intro.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelRanjan/nodeJs.git"
+  },
+  "author": "Joel Ranjan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoelRanjan/nodeJs/issues"
+  },
+  "homepage": "https://github.com/JoelRanjan/nodeJs#readme"
+}
