@@ -36,3 +36,32 @@
     default no. of workers in threadpool == 4
     to check no of workers ==> os.cpus().length
     check img folder for architecturescreenshots
+
+7. how to start a own server?
+    import http module
+    create server by http.createserver
+    create a port which listens the server
+    refer server folder
+
+URL --> uniform resource locator
+
+8.What is URL?
+    it is a user friendly name for an ip of the website
+    https//:www.google.com/gadgets?a=1&b=2
+    https// : protocal
+    www.google.com : Domain
+    /gadgets : path
+    ?a=1&b=2 : query parameters
+
+    install url package to get the clear data of url
+
+9.What are http methods?
+    GET --> gets the data from the server
+    POST --> sends and mutates the data
+    PUT --> if you want to put data in the database like images or files
+    PATCH --> if you want to change an existing data
+    DELETE --> if ou want to delete data for ex: user
+
+10. What is Express js? why do we use it?
+    Express is a framework used on node js. It is used to increase the productivity and gives lot of features to build web page.
+    
