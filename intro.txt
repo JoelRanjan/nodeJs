@@ -64,4 +64,39 @@ URL --> uniform resource locator
 
 10. What is Express js? why do we use it?
     Express is a framework used on node js. It is used to increase the productivity and gives lot of features to build web page.
-    
+
+11. Describe about versioning?
+    ex:"^4.17.3"
+    3 --> last part --> minor fixes --> update is optional
+    17 --> recommended bug fixes or a new functionality added --> have to update
+    4 --> major fix --> should not update untill we are sure about the change bought in.
+    ^ --> auto update minor and recommended fixes but not major fix
+    ~ --> auto update only minor fixes
+
+12.What are RESTful APIs?
+    API are the connection between client and the server to exchange the data.
+    RESTfil APIs are the apis following some architectural constraints.
+
+13. What are middlewares?
+    A function which has acces for requesting an object,responding to an object and moving to the next middleware function in the application 
+    request response cycle
+
+14.What are HTTP HEADERS?
+    These are important part of api request and response, which has meta-data associated with the apis request and response
+    Headers carry info for the reqest and response
+    always add x- to custom headers eg: res.setHeader("x-myName","joel")
+
+15.what are status codes?
+    1.informational(100 - 199)
+    2.successful(200-299)
+    3.redirectional(300-399)
+    4.clientside error(400 - 499)
+    5.serverside error(500-599)
+
+16.what is mongoDB?
+    its a non relational database which has set of collections in it.
+    to connect mongoDB to nodejs , install mongoose
+
+17.How to use mongoDB?
+    we will have a schema in mongoDB.we will define a structure init. through schema we will make a mmodel.
+    using model, we do CRUD operations.
