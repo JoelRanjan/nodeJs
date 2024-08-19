@@ -100,3 +100,8 @@ URL --> uniform resource locator
 17.How to use mongoDB?
     we will have a schema in mongoDB.we will define a structure init. through schema we will make a mmodel.
     using model, we do CRUD operations.
+
+18.requirement to start a project?
+    npn init
+    npm i express
+    npm i mongoose

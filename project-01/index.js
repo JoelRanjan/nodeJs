@@ -13,31 +13,35 @@ mongoose
   .then(() => console.log("mongodb Connected"))
   .catch((err) => console.log(err));
 
-const userSchema = new mongoose.Schema({
-  firstName: {
-    type: String,
-    required: true,
+const userSchema = new mongoose.Schema(
+  {
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    gender: {
+      type: String,
+    },
   },
-  lastName: {
-    type: String,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  gender: {
-    type: String,
-  },
-});
+  { timestamps: true }
+);
 
 const User = mongoose.model("user", userSchema);
 
 //html
-app.get("/users/list", (req, res) => {
+app.get("/users/list", async (req, res) => {
+  const allDbUsers = await User.find({});
   const html = `
     <ul>
-        ${users.map((user) => `<li>${user.first_name}</li>`).join("")}
+        ${allDbUsers.map((user) => `<li>${user.firstName}</li>`).join("")}
     </ul>
     `;
   res.send(html);
@@ -68,10 +72,10 @@ app.post("/users/user", async (req, res) => {
   console.log(result);
   return res.status(201).json({ msg: "success" });
 
-  //   users.push({ ...body, id: users.length + 1 });
-  //   fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-  //     return res.json(data);
-  //   });
+  // users.push({ ...body, id: users.length + 1 });
+  // fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
+  //   return res.json(data);
+  // });
 });
 
 app.listen(8001, (err, res) => {
