@@ -22,7 +22,6 @@ app.set("views", path.resolve("./views"));
 
 app.get("/test", async (req, res) => {
   const allUrls = await Url.find({});
-  console.log(allUrls);
   res.render("home", {
     urls: allUrls,
   });
