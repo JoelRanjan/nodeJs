@@ -1,8 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const Url = require("../models/url");
 
-router.get("/", (req, res) => {
-  res.render("home");
+router.get("/", async (req, res) => {
+  const allUrls = await Url.find({});
+  res.render("home", {
+    urls: allUrls,
+  });
 });
 
 router.get("/signup", (req, res) => {

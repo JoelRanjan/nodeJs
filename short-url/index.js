@@ -24,12 +24,12 @@ app.use("/", staticRoute);
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
-app.get("/test", async (req, res) => {
-  const allUrls = await Url.find({});
-  res.render("home", {
-    urls: allUrls,
-  });
-});
+// app.get("/test", async (req, res) => {
+//   const allUrls = await Url.find({});
+//   res.render("home", {
+//     urls: allUrls,
+//   });
+// });
 
 app.get("/url/:shortId", async (req, res) => {
   const shortId = req.params.shortId;
