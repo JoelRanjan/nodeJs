@@ -105,3 +105,5 @@ URL --> uniform resource locator
     npn init
     npm i express
     npm i mongoose
+
+19. stateful authentication and stateless authentication?
